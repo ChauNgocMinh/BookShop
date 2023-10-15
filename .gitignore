@@ -1,0 +1,16 @@
+# Angular
+node_modules/
+dist/
+e2e/
+.npm/
+.node_repl_history
+.angular
+.cache/
+.idea/
+*.log
+
+# ASP.NET
+/bin
+/obj
+
+
