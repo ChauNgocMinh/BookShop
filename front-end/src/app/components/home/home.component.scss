@@ -1,0 +1,19 @@
+nav{
+    height: 90vh;
+    width: auto;
+    .item{
+        position: relative;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        justify-content: end;
+        img{
+
+        }
+    }
+    .content{
+        position: absolute;
+        top: 0;
+        padding: 0 30px;
+    }
+}
