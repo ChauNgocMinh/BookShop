@@ -13,6 +13,8 @@ body {
 }
 
 .navigation {
+    z-index: 1;
+    position: relative;
     height: $nav-height;
     background: $nav-background;
 }
