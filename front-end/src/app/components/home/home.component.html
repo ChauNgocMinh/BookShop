@@ -1,45 +1,26 @@
 
 <nav>
     <div class="d-flex">
-        <div class="item">
-            <img id="item-img" src="../../../assets/img/nav-1.png" alt="">
-            <div class="nav-1 content  d-flex align-items-center w-100 h-100">
-                <div class="item-content">
-                    <div class="d-flex align-items-center">
-                        <h2 style="background-color: #d31c52; color: white; padding: 0 10px;">BIG SALE </h2><h2>SUMMER</h2>
-                    </div>
-                    <h5>UP TO 50% ON SELECT ITEMS</h5>
-                    <button>START SOPPING <i class="fa-solid fa-angles-right"></i></button>
-                </div>
+        <div *ngFor="let item of items; let i = index" class="item" [style.display]="i === currentIndex ? 'flex' : 'none'">
+          <img id="item-img" [src]="item.imgSrc" alt="">
+          <div class="nav-1 content d-flex align-items-center w-100 h-100">
+            <div class="item-content">
+              <div class="d-flex align-items-center">
+                <h2 style="background-color: #d31c52; color: white; padding: 0 10px;">{{ item.title1 }} </h2>
+                <h2>{{ item.title2 }}</h2>
+              </div>
+              <h5>{{ item.description }}</h5>
+              <button>START SHOPPING <i class="fa-solid fa-angles-right"></i></button>
             </div>
+          </div>
         </div>
-        <div class="item" style="display: none;">
-            <img id="item-img" src="../../../assets/img/nav-1.png" alt="">
-            <div class="nav-1 content  d-flex align-items-center w-100 h-100">
-                <div class="item-content">
-                    <div class="d-flex align-items-center">
-                        <h2 style="background-color: #d31c52; color: white; padding: 0 10px;">BIG SALE </h2><h2>SUMMER</h2>
-                    </div>
-                    <h5>UP TO 50% ON SELECT ITEMS</h5>
-                    <button>START SOPPING <i class="fa-solid fa-angles-right"></i></button>
-                </div>
-            </div>
-        </div>
-        <div class="item" style="display: none;">
-            <img id="item-img" src="../../../assets/img/nav-1.png" alt="">
-            <div class="nav-1 content  d-flex align-items-center w-100 h-100">
-                <div class="item-content">
-                    <div class="d-flex align-items-center">
-                        <h2 style="background-color: #d31c52; color: white; padding: 0 10px;">BIG SALE </h2><h2>SUMMER</h2>
-                    </div>
-                    <h5>UP TO 50% ON SELECT ITEMS</h5>
-                    <button>START SOPPING <i class="fa-solid fa-angles-right"></i></button>
-                </div>
-            </div>
-        </div>
+      </div>
+    <div class="change-page d-flex justify-content-center w-100">
+        <button (click)="show_left()"><i class="fa-solid fa-angle-left"></i></button>
+        <button (click)="show_right()"><i class="fa-solid fa-angle-right"></i></button>
     </div>
     <div class="change-page d-flex justify-content-center w-100">
-        <button onclick="show_left()"><i class="fa-solid fa-angle-left"></i></button>
+        <button (click)="show_left()"><i class="fa-solid fa-angle-left"></i></button>
         <button (click)="show_right()"><i class="fa-solid fa-angle-right"></i></button>
     </div>
 </nav>

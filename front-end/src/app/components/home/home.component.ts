@@ -6,17 +6,37 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  public currentIndex = 0;
+  public items: any[] = [
+    {
+      imgSrc: '../../../assets/img/nav-1.png',
+      title1: 'BIG SALE',
+      title2: 'SUMMER',
+      description: 'UP TO 50% ON SELECT ITEMS'
+    },
+    {
+      imgSrc: '../../../assets/img/nav-2.png',
+      title1: 'ANOTHER SALE',
+      title2: 'WINTER',
+      description: 'DISCOUNTS ON WINTER COLLECTION'
+    },
+    {
+      imgSrc: '../../../assets/img/nav-3.png',
+      title1: 'HOLIDAY SALE',
+      title2: 'FALL',
+      description: 'FALL SEASON DISCOUNTS'
+    }
+  ];
 
+  show_right() {
+    this.currentIndex = (this.currentIndex + 1) % this.items.length;
+  }
+
+  show_left() {
+    this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;
+  }
 }
 
-function show_right(): void{
-  let currentIndex = 0;
-  var items = document.querySelectorAll<HTMLElement>("#item");
-  
-  items[currentIndex].style.display = "none"; // Ẩn thẻ hiện tại
-  currentIndex = (currentIndex + 1) % items.length; // Di chuyển đến thẻ tiếp theo
-  items[currentIndex].style.display = "block"; // Hiển thị thẻ tiếp theo
-}
 // const left = document
 // const right 
 // const imageContainer = document.getElementById('item-img') as HTMLElement;
