@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   public currentIndex = 0;
+  
   public items: any[] = [
     {
       imgSrc: '../../../assets/img/nav-1.png',
@@ -18,15 +19,16 @@ export class HomeComponent {
       imgSrc: '../../../assets/img/nav-2.png',
       title1: 'ANOTHER SALE',
       title2: 'WINTER',
-      description: 'DISCOUNTS ON WINTER COLLECTION'
+      description: 'UP TO 50% ON SELECT ITEMS'
     },
     {
       imgSrc: '../../../assets/img/nav-3.png',
       title1: 'HOLIDAY SALE',
-      title2: 'FALL',
-      description: 'FALL SEASON DISCOUNTS'
+      title2: 'SUMMER',
+      description: 'UP TO 50% ON SELECT ITEMS'
     }
   ];
+
 
   show_right() {
     this.currentIndex = (this.currentIndex + 1) % this.items.length;
@@ -36,14 +38,3 @@ export class HomeComponent {
     this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;
   }
 }
-
-// const left = document
-// const right 
-// const imageContainer = document.getElementById('item-img') as HTMLElement;
-
-// function slideImage() {
-//   imageContainer.style.top = '0';
-// }
-
-// // Gọi hàm slideImage sau khi trang đã tải
-// window.addEventListener('load', slideImage);

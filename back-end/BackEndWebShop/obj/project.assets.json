@@ -4104,11 +4104,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\Shop\\back-end\\backendwebshop\\BackEndWebShop.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\BookShop\\back-end\\Backendwebshop\\BackEndWebShop.csproj",
       "projectName": "BackEndWebShop",
-      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\Shop\\back-end\\backendwebshop\\BackEndWebShop.csproj",
+      "projectPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\BookShop\\back-end\\Backendwebshop\\BackEndWebShop.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\Shop\\back-end\\backendwebshop\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\BookShop\\back-end\\Backendwebshop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tWI9WhtrV74xnPLKWjxgXzjbONNcdJDuJY4tGTjhnH1ADx7e7HGYm14PnUci1NMSdGAdBW9jk3lvw+45RqKlQQ==",
+  "dgSpecHash": "HlUJfMYNXeRkf0QBMSyTL1aq3UiUZbmYz+jd/JmlJS/JX81VBw178t/62FVJ19qNb+WKxpWU1MKriZ5SODaRkQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\Shop\\back-end\\backendwebshop\\BackEndWebShop.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\OneDrive\\Máy tính\\BookShop\\back-end\\Backendwebshop\\BackEndWebShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\antlr\\3.4.1.9004\\antlr.3.4.1.9004.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
