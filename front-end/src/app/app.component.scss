@@ -13,6 +13,7 @@ body {
 }
 
 header{
+    
     background: #d31c52;
     color: black;
     padding: 0 40px;
@@ -206,7 +207,14 @@ nav {
         }
     }
 }
-
+.main_box_login{
+    position: absolute;
+   
+    display: none;
+}
+header >.drop_box_login a:hover .main_box_login{
+    display: block;
+}
 @media screen and (min-width: $breakpoint) {
     .nav-list {
         display: block !important;
@@ -255,9 +263,11 @@ nav {
             
         }
         button:hover{
-            opacity: 0.7;
-
+        
+            background-color:#fff;
+            color:#0c0c0c;
             transition: linear 0.7s;
+            font-weight:600;
 
         }
     }
@@ -307,7 +317,8 @@ nav {
             flex-direction: column;
 
             .first_item{
-                padding: 10px 50px ;
+            
+                padding: 5px 50px ;
             }
             
         }
