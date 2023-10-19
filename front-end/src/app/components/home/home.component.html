@@ -1,12 +1,12 @@
 
 <nav>
-    <div class="d-flex">
+    <div class="d-flex w-100">
         <div *ngFor="let item of items; let i = index" class="item" [style.display]="i === currentIndex ? 'flex' : 'none'">
           <img id="item-img" [src]="item.imgSrc" alt="">
           <div class="nav-1 content d-flex align-items-center w-100 h-100">
             <div class="item-content">
-              <div class="d-flex align-items-center">
-                <h2 style="background-color: #d31c52; color: white; padding: 0 10px;">{{ item.title1 }} </h2>
+              <div class="title-item-content align-items-center">
+                <h2 style="background-color: #d31c52; color: white;">{{ item.title1 }} </h2>
                 <h2>{{ item.title2 }}</h2>
               </div>
               <h5>{{ item.description }}</h5>
@@ -25,6 +25,37 @@
     </div>
 </nav>
 
+<div class="category ">
+  <div class="item position-relative">
+    <img src="../../../assets/img/category1.jpg" alt="">
+    <div class="category-conten">
+      <a href="" src="">CHILDREN</a>
+    </div>
+  </div>
+  <div class="item position-relative">
+    <img src="../../../assets/img/category2.jpg" alt="">
+    <div class="category-conten">
+      <a href="" src="">EDUCATION</a>
+    </div>
+  </div>
+  <div class="item position-relative">
+    <img src="../../../assets/img/category3.jpg" alt="">
+    <div class="category-conten">
+      <a href="" src="">BISINESS</a>
+    </div>
+  </div>
+</div>
+
 <div>
-    
+
+</div>
+
+<div class="sale position-relative">
+  <img src="../../../assets/img/saleoftheday.jpg" alt="">
+  <div class="sale-conten-root position-absolute">
+    <div class="sale-conten">
+      <h1>DEAL OF THE DAY</h1>
+      <span>UP TO 30% OFF</span>
+      <div class="btn"><button>SHOP NOW!</button></div>
+  </div>
 </div>
