@@ -12,6 +12,17 @@ body {
     font-family: 'Poppins'
 }
 
+header{
+    background: #d31c52;
+    color: black;
+    padding: 0 40px;
+    position: relative;
+    a{
+        color: black;
+        padding: 0 15px;
+        text-decoration: none;
+    }
+}
 .navigation {
     z-index: 1;
     position: relative;
@@ -267,6 +278,9 @@ nav {
     }
 }
 @media screen and (max-width:700px){
+    header{
+        padding: 0px 10px;
+    }
     .footer{
         background-color:#171c28;
 
