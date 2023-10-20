@@ -1,11 +1,11 @@
-<header class="w-100 d-flex justify-content-between">
+<header class="w-100 d-flex justify-content-between" style="color: white;">
     <div>Ngôn ngữ</div>
-    <div><a href="">Login</a>|<a href="">Register</a></div>
+    <div><a style="color: white;" href="">Login</a>|<a style="color: white;" href="">Register</a></div>
 </header>
 <section class="navigation">
     <div class="nav-container">
         <div class="brand">
-            <a style="font-size: 30px;" href="#!">BOOK STORE</a>
+            <a style="font-size: 30px;" routerLink="">BOOK STORE</a>
         </div>
         <nav>
             <div class="nav-mobile">
@@ -13,7 +13,7 @@
             </div>
             <ul class="nav-list">
                 <li><a href="#!">Home</a></li>
-                <li><a href="#!">Shop</a></li>
+                <li><a routerLink="/products" routerLinkActive="active">Shop</a></li>
                 <li>
                     <a href="#!">Services</a>
                     <ul class="nav-dropdown">
@@ -28,52 +28,53 @@
         </nav>
     </div>
 </section>
-<app-home></app-home>
 
-    <div class="footer">
-        <div class="box d-flex">
-            <div>
-               <div class="h1">Nguyen Tran Thanh Liem</div>
-               <div class="h3">The first job</div>
-                
-            </div>
+<router-outlet></router-outlet>
+
+<div class="footer">
+    <div class="box d-flex">
+        <div>
+            <div class="h1">Cash Back Promo</div>
+            <div class="h3">The first job</div>
             
-            <button>Click</button>
         </div>
-        <div class="container ">
-            
-            <ul class="item">
-                <div class="first_item">COLORLIB</div>
-                <li>@2019</li>
-            </ul>
-            <ul class="item">
-                <div class="first_item">Customer</div>
-                <li>Buyer</li>
-                <li>Supplier</li>
-            </ul>
-            <ul class="item">
-                <div class="first_item">Company</div>
-                <li>About us</li>
-                <li>Careers</li>
-                <li>Contact us</li>
-            </ul>
-            <ul class="item">
-                <div class="first_item">Add</div>
-                <li>Tems & Conditions</li>
-                <li> Privacy Policy</li>
-            </ul>
-            <ul class="item">
-                <div class="first_item">Follow us</div>
-                <div class="d-flex">
-                    <li><i class="fa-brands fa-facebook"></i></li>
-                    <li><i class="fa-brands fa-twitter"></i></li>
-                    <li><i class="fa-brands fa-linkedin"></i></li>
-                    <li><i class="fa-solid fa-paper-plane"></i></li>
-                </div>
-
-            </ul>
-
-        </div>
+        
+        <button>Click</button>
     </div>
+    <div class="container ">
+        
+        <ul class="item">
+            <div class="first_item">COLORLIB</div>
+            <li>@2019</li>
+        </ul>
+        <ul class="item">
+            <div class="first_item">Customer</div>
+            <li>Buyer</li>
+            <li>Supplier</li>
+        </ul>
+        <ul class="item">
+            <div class="first_item">Company</div>
+            <li>About us</li>
+            <li>Careers</li>
+            <li>Contact us</li>
+        </ul>
+        <ul class="item">
+            <div class="first_item">Add</div>
+            <li>Tems & Conditions</li>
+            <li> Privacy Policy</li>
+        </ul>
+        <ul class="item">
+            <div class="first_item">Follow us</div>
+            <div class="d-flex">
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-linkedin"></i></li>
+                <li><i class="fa-solid fa-paper-plane"></i></li>
+            </div>
+
+        </ul>
+
+    </div>
+</div>
 
 

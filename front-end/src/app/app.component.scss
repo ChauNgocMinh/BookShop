@@ -28,6 +28,7 @@ header{
     position: relative;
     height: $nav-height;
     background: $nav-background;
+    box-shadow: 5px 0 10px gray;
 }
 
 .nav-container {
@@ -299,7 +300,7 @@ nav {
         }
         .box{
             
-            width: 60vw;
+            width: 85vw;
             // flex-direction: column;
                 button{
                     width: 25vw;                       
