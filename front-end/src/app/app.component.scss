@@ -13,6 +13,7 @@ body {
 }
 
 header{
+    
     background: #d31c52;
     color: black;
     padding: 0 40px;
@@ -207,7 +208,14 @@ nav {
         }
     }
 }
-
+.main_box_login{
+    position: absolute;
+   
+    display: none;
+}
+header >.drop_box_login a:hover .main_box_login{
+    display: block;
+}
 @media screen and (min-width: $breakpoint) {
     .nav-list {
         display: block !important;
@@ -232,28 +240,35 @@ nav {
         position: absolute;
         justify-content: space-between;
         align-items: center;
-        box-shadow:  -15px -15px 10px #8387d17e;
+        border-radius:5px;
+        box-shadow:  -15px -15px 10px #b2b3c57e;
         // opacity: ;
 
   
         .h1{
             color: #fff;
+            font-size: 24px;
+            
         }
         .h3{
             color: 32365c;
+            font-size: 15px;
         }
         button{
-            width: 100px;
+            width: 10vw;
             height: 50px; 
             background-color: #171c28;
             color: #fff;
             border: none ;
+            border-radius: 5px;
             
         }
         button:hover{
-            opacity: 0.7;
-
+        
+            background-color:#fff;
+            color:#0c0c0c;
             transition: linear 0.7s;
+            font-weight:600;
 
         }
     }
@@ -261,7 +276,8 @@ nav {
     .container{
         display: flex;
         justify-content: space-between;
-
+        
+        cursor: pointer;
         .item{
             color:#fff ;
 
@@ -270,15 +286,21 @@ nav {
                 margin-right: 10px;
                 color: #545962;
             }
-
-            .first_item{
-                 
+            li:hover{
+                border-bottom: #0c0c0c 1px solid;
+                color: rgba(255, 0, 0, 0.514);
             }
+            .first_item{
+                font-size: 20px;
+            }  
 
         }
     }
 }
-@media screen and (max-width:700px){
+
+@media screen and (max-width:500px){
+
+
     header{
         padding: 0px 10px;
     }
@@ -290,26 +312,36 @@ nav {
         }
         .container{
             display: flex;
-            flex-direction: column;
             align-items: center;
-            font-size: 18px;
+            font-size: 15px;
+            font-weight: 500;
+            flex-direction: column;
+
+            .first_item{
+            
+                padding: 5px 50px ;
+            }
+            
         }
         .container .first_item:hover{
-            background-color: #545962;
-            transition: linear 0.3s;
+            background-color:#fff;
+            font-size: 20px;
+            transition: linear 0.2s;
+            color: #0c0c0c;
+            border-radius:  0 20px 0 20px;
         }
         .box{
             
             width: 85vw;
             // flex-direction: column;
-                button{
-                    width: 25vw;                       
-                }
             .h3{
+                
                 display: none;
             }
         }
+        
     }
 }
+
 
 
