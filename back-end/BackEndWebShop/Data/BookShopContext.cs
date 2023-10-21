@@ -42,7 +42,14 @@ public partial class BookShopContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.Namebook)
                 .HasMaxLength(50)
                 .HasColumnName("NAMEBOOK");
+            entity.Property(e => e.Picture)
+                .HasMaxLength(255)
+                .HasColumnName("PICTURE");
+            entity.Property(e => e.Review)
+                .HasMaxLength(255)
+                .HasColumnName("REVIEW");
             entity.Property(e => e.Price).HasColumnName("PRICE");
+            entity.Property(e => e.Sales).HasColumnName("SALES");
             entity.Property(e => e.Status).HasColumnName("STATUS");
         });
 
