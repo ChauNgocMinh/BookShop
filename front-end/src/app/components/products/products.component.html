@@ -1,8 +1,20 @@
 <div class="container mt-4">
     <div class="back-link mb-3"><a routerLink="">Home</a> <i class="fa-solid fa-angles-right"></i> <a routerLink="/products">Products</a></div>
-
-    <div class="d-flex">
-        <div>
+    <div class="d-flex justify-content-center w-100">
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="btn-filter">
+            <button (click)="addClass()" ><i class="fa-solid fa-filter"></i></button>
+        </div>
+    </div>
+    <div class="row conten">
+        <div class="col-3" [ngClass]="{'active': isClassAdded}">
             <div class="filter">
                 <table class="table table-hover m-0">
                     <thead>
@@ -77,19 +89,19 @@
                 </table>
             </div>
         </div>
-        <div class="products">
-            <div class="card" *ngFor="let product of products">
-                <div class="image-container">
-                    <img style="width: 250px;height: auto;" class="card-img-top" [src]="product.picture" alt="{{ product.namebook }}">
-                    <div class="button-container">
-                        <button class="btn btn-primary">Buy</button>
-                        <button class="btn btn-success">Add to Cart</button>
+        <div class="products col-9">
+            <div class="row">
+                <div class="product col-lg-3 col-md-4 col-6" *ngFor="let product of products">
+                    <div class="card-product">
+                        <div class="image-container">
+                            <img routerLink="" class="card-img-top" [src]="product.picture" alt="{{ product.namebook }}">
+                        </div>
+                        <div>
+                            <h5 class="card-title d-flex justify-content-center"><a routerLink="">{{ product.namebook }}</a></h5>
+                            <p class="card-text d-flex justify-content-center">{{ product.price }} VNĐ</p>
+                            <a routerLink="" class="add-cart d-flex justify-content-center"><i class="fa-solid fa-cart-plus"></i> Add to cart</a>
+                        </div>
                     </div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">{{ product.namebook }}</h5>
-                    <p class="card-text">ID: {{ product.id }}</p>
-                    <p class="card-text">Price: {{ product.price }}</p>
                 </div>
             </div>
         </div>

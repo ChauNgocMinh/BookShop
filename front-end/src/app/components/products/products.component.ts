@@ -15,6 +15,12 @@ export class ProductsComponent {
       this.products = data;
     })
   }
+
+  isClassAdded: boolean = false;
+
+  public addClass() {
+    this.isClassAdded = !this.isClassAdded;
+  }
 }
 
 interface Product {
