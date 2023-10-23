@@ -30,6 +30,13 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 .AddEntityFrameworkStores<BookShopContext>()
 .AddDefaultTokenProviders();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("http://localhost:4200")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
+});
 
 builder.Services.AddDbContext<BookShopContext>
     (option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyStore")));
@@ -114,5 +121,5 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.UseCookiePolicy();
 app.MapControllers();
-
+app.UseCors("AllowSpecificOrigin");
 app.Run(); 
