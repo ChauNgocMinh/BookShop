@@ -1,0 +1,35 @@
+.divider:after,
+.divider:before {
+content: "";
+
+height: 1px;
+background: #eee;
+}
+
+@media (max-width:500px){
+      img{
+        display: none;
+      }
+}
+
+.input{
+  padding: 0;
+  position: relative;
+  input{
+    padding: 0 2rem;
+  }
+  i{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+.button_login{
+  display: flex;
+  
+}
+
+
