@@ -11,6 +11,7 @@ background: #eee;
       .img-left{
          img{
         display: none;
+        
       }
       }
       .button_login {
@@ -23,6 +24,12 @@ form{
   h1{
     text-align: center;
     font-weight:bold ;
+  }
+  .img-left{
+    img{
+        height: 100px;
+    }
+    
   }
 }
 .input{
