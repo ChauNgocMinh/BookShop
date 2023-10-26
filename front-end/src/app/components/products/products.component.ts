@@ -17,10 +17,10 @@ export class ProductsComponent {
   }
 
   isClassAdded: boolean = false;
-
   public addClass() {
     this.isClassAdded = !this.isClassAdded;
   }
+
 }
 
 interface Product {

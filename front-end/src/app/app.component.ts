@@ -10,15 +10,6 @@ export class AppComponent {
   title = 'first-project';
 }
 
-function add(x: string, y: number): void {
-  // return x + y;
-  
-}
- 
-let myAdd = function (x: number, y: number): number {
-  return x + y;
-};
-
 $(function () {
   $('nav ul li > a:not(:only-child)').on('click', function (e) {
       $(this)

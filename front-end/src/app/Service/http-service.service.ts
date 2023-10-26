@@ -16,4 +16,9 @@ export class HttpServiceService {
   public fetchData(apiUrl: string): Observable<any> {
     return this.httpClient.get<any>(apiUrl, this.httpOptions);
   }
+
+  public getProductById(apiUrl: string): Observable<any> {
+    return this.httpClient.get<any>(apiUrl, this.httpOptions);
+  }
+  
 }

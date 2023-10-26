@@ -94,12 +94,12 @@
                 <div class="product col-lg-3 col-md-4 col-6" *ngFor="let product of products">
                     <div class="card-product">
                         <div class="image-container">
-                            <img routerLink="" class="card-img-top" [src]="product.picture" alt="{{ product.namebook }}">
+                            <img routerLink="/product" class="card-img-top" [src]="product.picture" alt="{{ product.namebook }}">
                         </div>
                         <div>
-                            <h5 class="card-title d-flex justify-content-center"><a routerLink="">{{ product.namebook }}</a></h5>
+                            <h5 class="card-title d-flex justify-content-center"><a [routerLink]="['/product', product.id]">{{ product.namebook }}</a></h5>
                             <p class="card-text d-flex justify-content-center">{{ product.price }} VNĐ</p>
-                            <a routerLink="" class="add-cart d-flex justify-content-center"><i class="fa-solid fa-cart-plus"></i> Add to cart</a>
+                            <a routerLink="/" class="add-cart d-flex justify-content-center"><i class="fa-solid fa-cart-plus"></i> Add to cart</a>
                         </div>
                     </div>
                 </div>

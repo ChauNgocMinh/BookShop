@@ -1,0 +1,117 @@
+.back-link {
+    color: #0d6efd;
+    a{
+        
+        text-decoration: none;
+    }
+    a:hover{
+        opacity: 0.7;
+    }
+    i{
+        margin: 0 8px;
+    }
+}
+.image{
+    padding: 0 30px;
+    height: 485px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: grey;
+    img{
+        height: 60%;
+        width: auto;
+
+        //width: 100%;
+    }
+}
+.info-product{
+    padding: 0 30px;
+    height: 485px;
+    .vote{
+        i{
+            color: yellow;
+        }
+    }
+    .button{
+        margin: 20px 0;
+        
+        .btn-add-cart{
+            margin: 10px 0;
+            height: 60px;
+            border: 2px solid #d31c52;
+            background: #d31c5350;
+            transition: linear 0.5s;
+        }
+        .btn-buy{     
+            margin: 10px 0;  
+            height: 60px;
+            border: none;
+            background: #d31c52;
+            transition: linear 0.5s;
+        }
+        button:hover{
+            opacity: 0.75;
+        }
+    }
+    .price{
+        font-size: 20px;
+        margin: 20px 0;
+        padding: 15px 20px;
+        background: #fafafa;
+        .cost{
+            font-size: 1rem;
+            text-decoration: line-through;
+            color: #929292;
+            margin-right: 10px;
+        }
+        .real-price{
+            font-size: 1.875rem;
+            font-weight: 500;
+            color: #ee4d2d;
+        }
+    }
+    .ship{
+        margin: 15px 0;
+        span{
+            font-style: italic;
+        }
+    }
+    .number{
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+        button{
+            border: none;
+            height: 45px;
+            width: 45px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            width: 45px;
+            // padding: 0 20px;
+            // background: grey;
+        }
+    }
+    
+    .share{
+        font-size: 20px;
+        color: black;
+        a{
+            text-decoration: none;
+            i{
+                margin: 0 5px;
+            }
+        }
+        
+    }
+}
+
+@media(max-width: 770px){
+    .info-product{
+        height: 550px;
+    }
+}
