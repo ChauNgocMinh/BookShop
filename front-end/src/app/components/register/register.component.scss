@@ -14,12 +14,14 @@ background: #eee;
         
       }
       }
-      .button_login {
+      .button_register {
         button{
           margin: 10px 0 ;
         }
       }
 }
+
+
 form{
   h1{
     text-align: center;
@@ -29,9 +31,69 @@ form{
     img{
         height: 100px;
     }
-    
+  }
+  .link-login{
+    text-align: center;
   }
 }
+
+@keyframes index1 {
+  25%{
+   left: -300px;
+   opacity: 0.25;
+   width: 0px;
+   height: 0px;
+  }
+  50%{
+   opacity: 0.5;
+   left: -200px;
+   width: 100px;
+   height: 150px;
+  }
+  75%{
+   opacity: 0.75;
+   left: -100px;
+   width: 200px;
+   height: 300px;
+  }
+  100%{
+   opacity: 1;
+   left: 0px;
+   width: 300px;
+   height: 500px ;
+  }
+}
+  .img{
+    animation:forwards linear 0.6s ;
+    animation-name: index1;
+  }
+
+@keyframes index2 {
+  25%{
+   right: -300px;
+   opacity: 0.25;
+  }
+  50%{
+   opacity: 0.5;
+   right: -200px;
+  }
+  75%{
+   opacity: 0.75;
+   right: -100px;
+  }
+  100%{
+   opacity: 1;
+   right: 0px;
+  }
+}
+.form-container{
+ .input{
+   animation: linear 0.6s ;
+   animation-name: index2;
+   
+ }
+}
+
 .input{
   padding: 0;
   position: relative;
@@ -47,7 +109,7 @@ form{
     align-items: center;
   }
 }
-.button_login{
+.button_register{
   display: flex;
   button{
     border: none;
