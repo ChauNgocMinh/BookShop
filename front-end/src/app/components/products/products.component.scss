@@ -102,6 +102,9 @@
                 margin: 15px 0 0 0;
                 a{
                     color: black !important;
+                    overflow: hidden; /* Ẩn nội dung vượt quá chiều rộng của thẻ con */
+                    white-space: nowrap; /* Ngăn chặn việc xuống dòng */
+                    text-overflow: ellipsis; 
                 }
             }
             .card-text{

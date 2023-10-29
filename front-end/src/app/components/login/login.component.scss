@@ -29,38 +29,38 @@ form{
   }
 }
 
-@keyframes index1 {
-   25%{
-    left: -300px;
-    opacity: 0.25;
-    width: 0px;
-    height: 0px;
-   }
-   50%{
-    opacity: 0.5;
-    left: -200px;
-    width: 100px;
-    height: 150px;
-   }
-   75%{
-    opacity: 0.75;
-    left: -100px;
-    width: 200px;
-    height: 300px;
-   }
-   100%{
-    opacity: 1;
-    left: 0px;
-    width: 300px;
-    height: 500px ;
-   }
-}
+
 
   .img{
     animation:forwards linear 0.6s ;
     animation-name: index1;
   }
-
+  @keyframes index1 {
+    25%{
+      left: -300px;
+      opacity: 0.25;
+      width: 0px;
+      height: 0px;
+    }
+    50%{
+      opacity: 0.5;
+      left: -200px;
+      width: 100px;
+      height: 150px;
+    }
+    75%{
+      opacity: 0.75;
+      left: -100px;
+      width: 200px;
+      height: 300px;
+    }
+    100%{
+      opacity: 1;
+      left: 0px;
+      width: 300px;
+      height: 500px ;
+    }
+ }
 @keyframes index2{
   25%{
    right: -300px;

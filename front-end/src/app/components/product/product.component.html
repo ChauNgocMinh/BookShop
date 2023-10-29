@@ -8,8 +8,22 @@
     </div>
     <div class="row">
         <div class="image col-12 col-md-6">
-            <img [src]="products.picture" alt="">
+            <div class="main-img">
+                <img class="" [src]="products.picture" alt="">
+            </div>
+            <div class="images"> 
+                <div class="item-image">
+                    <img [src]="products.picture" alt="">
+                </div>
+                <div class="item-image">
+                    <img [src]="products.picture" alt="">
+                </div>
+                <div class="item-image">
+                    <img [src]="products.picture" alt="">
+                </div>
+            </div>
         </div>
+        
         <div class="info-product col-12 col-md-6">
             <h1>    
                 {{products.namebook}}
@@ -30,7 +44,7 @@
             </div>
             <div class="number d-flex">
                 <button> + </button>
-                <input type="text"/>
+                <input type="number"  value="0" min="0"/>
                 <button> + </button>
             </div>
             <div class="ship">
@@ -39,7 +53,7 @@
             </div>
             <div class="row button w-100 justify-content-around">
                 <button class="col-md-5 col-12 btn-buy">Buy now</button>
-                <button class="col-md-5 col-12 btn-add-cart">Add to cart</button>
+                <button class="col-md-5 col-12 btn-add-cart ">Add to cart</button>
             </div>
             
             <div class="share">

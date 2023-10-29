@@ -98,7 +98,7 @@
                         </div>
                         <div>
                             <h5 class="card-title d-flex justify-content-center"><a [routerLink]="['/product', product.id]">{{ product.namebook }}</a></h5>
-                            <p class="card-text d-flex justify-content-center">{{ product.price }} VNĐ</p>
+                            <p class="card-text d-flex justify-content-center">{{ product.price.toLocaleString("vi-VN") }} VNĐ</p>
                             <a routerLink="/" class="add-cart d-flex justify-content-center"><i class="fa-solid fa-cart-plus"></i> Add to cart</a>
                         </div>
                     </div>
