@@ -6,12 +6,10 @@ height: 1px;
 background: #eee;
 }
 
-@media (max-width:500px){
+@media (max-width:991px){
 
-      .img-left{
-         img{
+      .img{
         display: none;
-      }
       }
       .button_login {
         button{
@@ -31,34 +29,30 @@ form{
 
 @keyframes index1 {
    25%{
-    left: -300px;
+    
     opacity: 0.25;
-    width: 0px;
-    height: 0px;
+    transform: scale(0.25,0.25);
    }
    50%{
     opacity: 0.5;
-    left: -200px;
-    width: 100px;
-    height: 150px;
+    
+    transform: scale(0.5,0.5);
    }
    75%{
     opacity: 0.75;
-    left: -100px;
-    width: 200px;
-    height: 300px;
+    
+    transform: scale(0.75,0.75);
    }
    100%{
     opacity: 1;
-    left: 0px;
-    width: 300px;
-    height: 500px ;
+    
+    transform: scale(1,1);
    }
 }
-
   .img{
-    animation:forwards linear 0.6s ;
+    animation:linear 0.4s ;
     animation-name: index1;
+    animation-delay: 0.3s;
   }
 
 @keyframes index2{
@@ -81,10 +75,15 @@ form{
 }
 .form-container{
  .input{
-   animation:forwards linear 0.6s ;
+   animation:linear 0.5s ;
    animation-name: index2;
    
  }
+}
+
+.row{
+  display:block;
+  flex-basis: content;
 }
 
 .input{

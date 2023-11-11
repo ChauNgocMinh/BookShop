@@ -22,3 +22,12 @@ export class HttpServiceService {
   }
   
 }
+export class HttpService {
+  private apiUrl = 'your_api_url';
+
+  constructor(private http: HttpClient) {}
+
+  postData(data: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, data);
+  }
+}

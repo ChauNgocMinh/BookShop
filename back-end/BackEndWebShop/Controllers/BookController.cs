@@ -83,7 +83,7 @@ namespace BackEndWebShop.Controllers
         }
 
         [HttpPost]
-        [Authorize (Roles = "Admin")]
+        // [Authorize (Roles = "Admin")]
         public async Task<ActionResult> AddBook(BookModel model)
         {
             try
