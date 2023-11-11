@@ -27,6 +27,7 @@ form{
   }
 }
 
+<<<<<<< HEAD
 @keyframes index1 {
    25%{
     
@@ -49,12 +50,41 @@ form{
     transform: scale(1,1);
    }
 }
+=======
+
+
+>>>>>>> 907252c9c05a79414c03951dd433a9a2d34f5fd3
   .img{
     animation:linear 0.4s ;
     animation-name: index1;
     animation-delay: 0.3s;
   }
-
+  @keyframes index1 {
+    25%{
+      left: -300px;
+      opacity: 0.25;
+      width: 0px;
+      height: 0px;
+    }
+    50%{
+      opacity: 0.5;
+      left: -200px;
+      width: 100px;
+      height: 150px;
+    }
+    75%{
+      opacity: 0.75;
+      left: -100px;
+      width: 200px;
+      height: 300px;
+    }
+    100%{
+      opacity: 1;
+      left: 0px;
+      width: 300px;
+      height: 500px ;
+    }
+ }
 @keyframes index2{
   25%{
    right: -300px;
