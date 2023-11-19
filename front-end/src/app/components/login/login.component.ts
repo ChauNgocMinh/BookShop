@@ -19,15 +19,19 @@ export class LoginComponent {
     private route: ActivatedRoute,
     public router: Router,
   ){}
+  
   public LoginFunction(): void{
-    
-    const url = 'https://localhost:7147/Controller/SignIn?Email=' + encodeURIComponent(this.login.Email) + '&Password=' + encodeURIComponent(this.login.Pass);
-    this.httpServiceService.postData(url, this.login).subscribe((data: Login[]) => {
-      this.router.navigate(['/']);
-    })
+    const pass = customEncodeURIComponent(this.login.Pass);
+    const url = 'https://localhost:7147/Controller/SignIn?Email=' + encodeURIComponent(this.login.Email) + '&Password=' + pass;
+    this.httpServiceService.postData(url, this.login).subscribe((message: string) => {
+      localStorage.setItem('jwtToken', message);
+      this.router.navigate(['/']);  
+    });
   }
 }
-
+function customEncodeURIComponent(value: string): string {
+  return encodeURIComponent(value).replace(/!/g, '%21');
+}
 interface Login {
   Email: string;
   Pass: string;

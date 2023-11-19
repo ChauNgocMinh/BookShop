@@ -22,7 +22,7 @@ export class HttpServiceService {
     return this.httpClient.get<any>(apiUrl, this.httpOptions);
   }
 
-  postData(apiUrl: string, data: any): Observable<any> {
+  public postData(apiUrl: string, data: any): Observable<any> {
     return this.httpClient.post<any>(apiUrl, data);
   }
 }

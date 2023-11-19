@@ -45,7 +45,7 @@ namespace BackEndWebShop.Controllers
             var result = await accountRepo.SignUpAsync(signUpModel);
             if (result.Succeeded)
             {
-                return Ok("Vui lòng xác nhận email để thực hiện");
+                return new JsonResult(new { message = "Vui lòng xác nhận email để thực hiện" });
             }
             return BadRequest();
         }
@@ -53,8 +53,7 @@ namespace BackEndWebShop.Controllers
         public async Task<IActionResult> Confirm(string Email)
         {
             await accountRepo.ConfirmAccountAsync(Email);
-            return Ok("Tài khoản được tạo thành công!!!");
-          
+            return new JsonResult(new { message = "Tài khoản được tạo thành công!!!" });
         }
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInModel signInModel)
@@ -65,8 +64,7 @@ namespace BackEndWebShop.Controllers
             {
                 return Unauthorized();
             }
-
-            return Ok(result);
+            return new JsonResult(new { message = result });
         }
 
         [Authorize]

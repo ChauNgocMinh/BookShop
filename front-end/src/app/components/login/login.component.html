@@ -10,14 +10,14 @@
           <h1>Login</h1>
           <!-- Email input -->
           <div class="input form-outline mb-4 ">
-            <input type="text" name="email"   placeholder="Email" class="form-control form-control-lg"/>
+            <input [(ngModel)]="this.login.Email" type="text" name="email"   placeholder="Email" class="form-control form-control-lg"/>
             <i class="fa-solid fa-user"></i>
           </div>
           
 
           <!-- Password input -->
           <div class="input form-outline mb-4">
-            <input [(ngModel)]="this.login.Pass" type="password" id="form1Example23" name="password" placeholder="Password" class="form-control form-control-lg" formControlName="password" />
+            <input [(ngModel)]="this.login.Pass" type="password" name="pass"   placeholder="Password" class="form-control form-control-lg"/>
             <i class="fa-solid fa-lock "></i>
             
           </div>
