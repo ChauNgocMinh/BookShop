@@ -25,16 +25,14 @@ export class ProductComponent {
     private route: ActivatedRoute
   ){}
   productID: string = '';
-public ngOnInit(): void {
-  this.route.params.subscribe(param => {
-    this.productID = param['ProductId'];
-  });
-
-    //let test = `https://localhost:7147/Controller/GetBookById?id=${this.productID}`;
-    this.httpServiceService.fetchData(`https://localhost:7147/Controller/GetBookById?id=${this.productID}`)
-    .subscribe((data: Product) =>{
-      this.products = data;
-    })
+  public ngOnInit(): void {
+    this.route.params.subscribe(param => {
+      this.productID = param['ProductId'];
+    });
+      this.httpServiceService.fetchData(`https://localhost:7147/Controller/GetBookById?id=${this.productID}`)
+      .subscribe((data: Product) =>{
+        this.products = data;
+      })
   }
 }
 

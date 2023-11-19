@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
+  
 })
 export class HttpServiceService {
   constructor(private httpClient: HttpClient) { }
@@ -20,14 +21,8 @@ export class HttpServiceService {
   public getProductById(apiUrl: string): Observable<any> {
     return this.httpClient.get<any>(apiUrl, this.httpOptions);
   }
-  
-}
-export class HttpService {
-  private apiUrl = 'your_api_url';
 
-  constructor(private http: HttpClient) {}
-
-  postData(data: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, data);
+  postData(apiUrl: string, data: any): Observable<any> {
+    return this.httpClient.post<any>(apiUrl, data);
   }
 }

@@ -17,7 +17,7 @@
 
           <!-- Password input -->
           <div class="input form-outline mb-4">
-            <input type="password" id="form1Example23" name="password" placeholder="Password" class="form-control form-control-lg" formControlName="password" />
+            <input [(ngModel)]="this.login.Pass" type="password" id="form1Example23" name="password" placeholder="Password" class="form-control form-control-lg" formControlName="password" />
             <i class="fa-solid fa-lock "></i>
             
           </div>
@@ -32,7 +32,7 @@
           <!-- Submit button -->
           <div class="button_login justify-content-around row">
             
-            <button type="submit" class=" col-9 col-lg-5">Sign in</button>
+            <button (click)="LoginFunction()" class=" col-9 col-lg-5">Sign in</button>
             <button class="col-9 col-lg-5"><a href=""><img src="../../../assets/img/google.png" alt=""></a></button>
           </div>
           
