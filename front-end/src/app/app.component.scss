@@ -18,11 +18,42 @@ header{
     color: black;
     padding: 0 40px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     a{
         color: black;
         padding: 0 15px;
         text-decoration: none;
+    }
+    .drop_box_login {
+        .info-user {
+            position: relative; 
+            .dropdown-content {
+                z-index: 100;
+                display: none; 
+                position: absolute;
+                top: 106%; 
+                left: 30px;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                a {
+                    color: black;
+                    padding: 5% 16px;
+                    text-decoration: none;
+                    display: block;
+                    border-bottom: 1px solid #000;
+                &:hover {
+                    background-color: #f1f1f1;
+                }
+              }
+              a:last-child {
+                border-bottom: none;
+              }
+            }
+            &:hover .dropdown-content {
+              display: block; 
+            }
+        }
     }
 }
 
@@ -215,6 +246,7 @@ nav {
    
     display: none;
 }
+
 header >.drop_box_login a:hover .main_box_login{
     display: block;
 }
