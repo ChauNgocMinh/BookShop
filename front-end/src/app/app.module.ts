@@ -12,8 +12,9 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProductComponent } from './components/product/product.component';
+import { ConfirmEmailComponent } from './components/confirm-email/confirm-email.component';
 @NgModule({
-  declarations: [ AppComponent, LoginComponent, HomeComponent, ProductsComponent, RegisterComponent, ProductComponent,],
+  declarations: [ AppComponent, LoginComponent, HomeComponent, ProductsComponent, RegisterComponent, ProductComponent, ConfirmEmailComponent,],
   imports: [ BrowserModule, AppRoutingModule, FormsModule, RouterModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
