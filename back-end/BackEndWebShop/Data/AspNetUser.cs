@@ -7,10 +7,6 @@ public partial class AspNetUser
 {
     public string Id { get; set; } = null!;
 
-    public string FirstName { get; set; } = null!;
-
-    public string LastName { get; set; } = null!;
-
     public string? UserName { get; set; }
 
     public string? NormalizedUserName { get; set; }
@@ -41,6 +37,9 @@ public partial class AspNetUser
 
     public bool? Activate { get; set; }
 
+    public string? FirstName { get; set; }
+
+    public string? LastName { get; set; }
 
     public virtual ICollection<AspNetUserClaim> AspNetUserClaims { get; } = new List<AspNetUserClaim>();
 

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   
 })
 export class HttpServiceService {
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
   
   private httpOptions = {
     headers: new HttpHeaders({
@@ -22,7 +22,25 @@ export class HttpServiceService {
     return this.httpClient.get<any>(apiUrl, this.httpOptions);
   }
 
-  postData(apiUrl: string, data: any): Observable<any> {
+  public postData(apiUrl: string, data: any): Observable<any> {
     return this.httpClient.post<any>(apiUrl, data);
+  }
+
+  
+  decodeJwt(token: string): { header: any; payload: any } | null {
+    const parts = token.split('.');
+
+    if (parts.length !== 3) {
+      // Invalid token format
+      return null;
+    }
+
+    const decodedHeader = JSON.parse(atob(parts[0]));
+    const decodedPayload = JSON.parse(atob(parts[1]));
+
+    return {
+      header: decodedHeader,
+      payload: decodedPayload,
+    };
   }
 }

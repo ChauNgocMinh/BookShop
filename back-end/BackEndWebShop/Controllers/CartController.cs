@@ -46,15 +46,14 @@ namespace BackEndWebShop.Controllers
             {
                 var email = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Email")?.Value;
                 var book = await _bookRepo.GetBookByIdAsync(Id);
+
                 CartItemModel item = new CartItemModel
                 {
                     Id = RandomId(),
                     Email = email.ToString(),
                     IdBook = Id,
                     Number = number,
-                    TotalItem = number * book.Price,
                     Status = true,
-                    Date = DateTime.Now,
                 };
                 await _cartRepo.AddItemAsync(item);
                 return Ok();
@@ -77,7 +76,6 @@ namespace BackEndWebShop.Controllers
                 {
                     Id = RandomId(),
                     Email = email,
-                    IdCartItem = Id,
                     BuyingDate = DateTime.Now,
                 };
                 await _cartRepo.BuyAsync(Id, NewBill);

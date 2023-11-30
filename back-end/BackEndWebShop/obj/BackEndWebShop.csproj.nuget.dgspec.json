@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Liem\\Desktop\\BookShop\\back-end\\BackEndWebShop\\BackEndWebShop.csproj": {}
   },
   "projects": {
@@ -12,9 +13,28 @@
         "projectPath": "C:\\Users\\Liem\\Desktop\\BookShop\\back-end\\BackEndWebShop\\BackEndWebShop.csproj",
         "packagesPath": "C:\\Users\\Liem\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Liem\\Desktop\\BookShop\\back-end\\BackEndWebShop\\obj\\",
+=======
+    "C:\\Users\\PC\\Desktop\\BookShop\\back-end\\BackEndWebShop\\BackEndWebShop.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\PC\\Desktop\\BookShop\\back-end\\BackEndWebShop\\BackEndWebShop.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\BookShop\\back-end\\BackEndWebShop\\BackEndWebShop.csproj",
+        "projectName": "BackEndWebShop",
+        "projectPath": "C:\\Users\\PC\\Desktop\\BookShop\\back-end\\BackEndWebShop\\BackEndWebShop.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\BookShop\\back-end\\BackEndWebShop\\obj\\",
+>>>>>>> fd4bc7402d2f6bf13d12d027c194a3591d7b72fb
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Liem\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> fd4bc7402d2f6bf13d12d027c194a3591d7b72fb
         ],
         "originalTargetFrameworks": [
           "net6.0"

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Text;
 using System;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
 
 namespace BackEndWebShop.Repository
 {
@@ -31,22 +32,31 @@ namespace BackEndWebShop.Repository
         }
         public async Task<List<CartItemModel>> ShowCartAsync()
         {
-            var ListItem = _context.CartItems!.Where(b => b.Status == true);
+            var ListItem = _context.CartItem!.Where(b => b.Status == true);
             return _mapper.Map<List<CartItemModel>>(ListItem);
           
         }
 
-        public async Task<string> AddItemAsync(CartItemModel model)
+        public async Task AddItemAsync(CartItemModel model)
         {
-            var NewItem = _mapper.Map<CartItem>(model);
-            await _context.CartItems!.AddAsync(NewItem);
-            await _context.SaveChangesAsync();
-            return NewItem.Id;
+            var item = await _context.CartItem.SingleOrDefaultAsync(x => x.Id == model.Id);
+            
+            if(item == null)
+            {
+                var NewItem = _mapper.Map<CartItem>(model);
+                await _context.CartItem!.AddAsync(NewItem);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                item.Number += model.Number;
+                _context.SaveChanges();
+            }
         }
 
         public async Task<BillModel> BuyAsync(string IdCart, BillModel model)
         {
-            var Item = _context.CartItems!.SingleOrDefault(x => x.Id == IdCart);
+            var Item = _context.CartItem!.SingleOrDefault(x => x.Id == IdCart);
             Item.Status = false;
             var History = _mapper.Map<Bill>(model);
             await _context.AddAsync(History);
@@ -56,10 +66,10 @@ namespace BackEndWebShop.Repository
 
         public async Task RemoveItenAsync(string IdItem)
         {
-            var DeleteItem = _context.CartItems!.SingleOrDefault(x => x.Id == IdItem);
+            var DeleteItem = _context.CartItem!.SingleOrDefault(x => x.Id == IdItem);
             if (DeleteItem != null)
             {
-                _context.CartItems!.Remove(DeleteItem);
+                _context.CartItem!.Remove(DeleteItem);
                 _context.SaveChanges();
             }
         }
@@ -78,24 +88,16 @@ namespace BackEndWebShop.Repository
 
         public async Task EditNumberItemAsync(string IdItem, int Number)
         {
-            var EditItem = _context.CartItems!.SingleOrDefault(x => x.Id == IdItem);
-            var Book = _context.Books!.SingleOrDefault(x => x.Id == EditItem.Id);
-
+            var EditItem = _context.CartItem!.SingleOrDefault(x => x.Id == IdItem);
             if (EditItem != null)
             {
                 EditItem.Number = Number;
-                EditItem.TotalItem = Book.Price * Number;
                 if (EditItem.Number == 0)
                 {
                     await RemoveItenAsync(IdItem);
                 }
                 _context.SaveChanges();
             }
-        }
-
-        public Task<List<BillModel>> GetItemCartByDateAsync(DateTime Time)
-        {
-            throw new NotImplementedException();
         }
     }
 }
